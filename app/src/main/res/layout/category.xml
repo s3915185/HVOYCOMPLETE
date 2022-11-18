@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background">
+    android:background="@drawable/gradient_background">
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/regular"
         android:text="Category"
         android:textColor="#fdfdfd"
+        android:fontFamily="@font/regular"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +42,8 @@
         android:layout_width="119dp"
         android:layout_height="38dp"
         android:text="Pick a Date:"
+        android:textColor="#fdfdfd"
+        android:fontFamily="@font/regular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.198"
@@ -49,33 +51,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.141" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/showdate_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pick"
+        android:textColor="#fdfdfd"
+        android:fontFamily="@font/regular"
+        android:background="@drawable/button_function"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.128" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/submit_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
+        android:textColor="#fdfdfd"
+        android:fontFamily="@font/regular"
+        android:background="@drawable/button_function"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"
         app:layout_constraintVertical_bias="0.928" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/lifestyle_Btn"
         android:layout_width="243dp"
+        android:textColor="#fdfdfd"
+        android:fontFamily="@font/regular"
+        android:background="@drawable/button_function"
         android:layout_height="112dp"
         android:text="Lifestyle"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,25 +96,34 @@
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"
         app:layout_constraintVertical_bias="0.329" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/food_Btn"
         android:layout_width="243dp"
         android:layout_height="112dp"
+        android:textColor="#fdfdfd"
+        android:fontFamily="@font/regular"
         android:text="Food"
+        android:background="@drawable/button_function"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"
         app:layout_constraintVertical_bias="0.757" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/knowledge_Btn"
         android:layout_width="243dp"
         android:layout_height="112dp"
+        android:textColor="#fdfdfd"
+        android:fontFamily="@font/regular"
+        android:background="@drawable/button_function"
         android:text="Knowledge"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".food_category"
-    android:background="#16C2D5">
+    android:background="@drawable/gradient_background">
 
     <ImageButton
         android:id="@+id/back_button"
@@ -27,6 +27,8 @@
         android:layout_width="133dp"
         android:layout_height="34dp"
         android:text="Points:"
+        android:textColor="#fdfdfd"
+        android:fontFamily="@font/regular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.91"
@@ -50,47 +52,60 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <LinearLayout
-        android:layout_width="281dp"
-        android:layout_height="646dp"
+        android:layout_width="297dp"
+        android:layout_height="337dp"
+        android:background="@drawable/button_function"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:padding="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <CheckBox
             android:id="@+id/checkBox7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:onClick="onCheckboxClicked"
             android:text="Beef/Lamb/Pork"
-            android:onClick="onCheckboxClicked" />
+            android:textColor="#fdfdfd" />
 
         <CheckBox
             android:id="@+id/checkBox8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:onClick="onCheckboxClicked"
             android:text="Fish/Crab/Lobster/Oysters"
-            android:onClick="onCheckboxClicked" />
+            android:textColor="#fdfdfd" />
 
         <CheckBox
             android:id="@+id/checkBox9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:onClick="onCheckboxClicked"
             android:text="Almonds/Cashew/Other Nuts"
-            android:onClick="onCheckboxClicked" />
+            android:textColor="#fdfdfd" />
 
         <CheckBox
             android:id="@+id/checkBox10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
             android:onClick="onCheckboxClicked"
-            android:text="Avocado/Apple/Oranges/Other Fruits" />
+            android:text="Avocado/Apple/Oranges/Other Fruits"
+            android:textColor="#fdfdfd" />
 
         <CheckBox
             android:id="@+id/checkBox11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
             android:onClick="onCheckboxClicked"
-            android:text="Tomatoes/Brocolli/Spinach/Other Vegetables" />
+            android:text="Tomatoes/Brocolli/Spinach/Other Vegetables"
+            android:textColor="#fdfdfd" />
 
     </LinearLayout>
 
