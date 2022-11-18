@@ -2,6 +2,7 @@ package com.example.healthierversionofyourself;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,19 +10,45 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class home extends AppCompatActivity {
 
+    int submitted;
+    int dateToday;
+    int monthToday;
+    int yearToday;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            dateToday = LocalDate.now().getDayOfMonth();
+            monthToday = LocalDate.now().getMonthValue();
+            yearToday = LocalDate.now().getYear();
+        }
+
+
         ArrayList<Customer> customers = Start.getCustomers();
         Intent home = getIntent();
         TextView phonenumber = (TextView) findViewById(R.id.userID);
         Integer id = (Integer) home.getExtras().get("id");
+
+        TextView scoreText = (TextView) findViewById(R.id.score);
+
+        ArrayList<DateMemory> dates = Start.getDateMemories();
+        int dateSize = Start.getDateSize();
+        for (int i = 0; i < dateSize; i++) {
+            int value = dates.get(i).getId();
+            if ((value == id) && (dates.get(i).getDay() == dateToday) && (dates.get(i).getMonth() == monthToday) && (dates.get(i).getYear() == yearToday)) {
+                scoreText.setText(dates.get(i).getScore() + "%");
+            }
+        }
 
 
         ImageButton userBtn = (ImageButton) findViewById(R.id.userBtn);

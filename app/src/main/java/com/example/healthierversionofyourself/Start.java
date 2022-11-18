@@ -7,8 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
-
+import java.util.Date;
 
 
 public class Start extends AppCompatActivity {
@@ -26,9 +27,35 @@ public class Start extends AppCompatActivity {
         customers.add(customer);
     }
 
+
     private static ArrayList<Customer> customers = new ArrayList<>();
     private static int size = 0;
 
+    private static ArrayList<DateMemory> dateMemories = new ArrayList<>();
+    private static int dateSize = 0;
+
+    public static int getDateSize() {
+        return dateSize;
+    }
+
+    public static void addDate(String date, int score, Integer id) {
+        dateMemories.add(new DateMemory(date, score, id));
+        dateSize++;
+    }
+
+    public static ArrayList<DateMemory> getDateMemories() {
+        return dateMemories;
+    }
+
+    private static String currentDate;
+
+    public static String getCurrentDate() {
+        return currentDate;
+    }
+
+    public static void setCurrentDate(String currentDate) {
+        Start.currentDate = currentDate;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         customers.add(new Customer(00001, "admin", "0123456789"));

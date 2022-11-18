@@ -21,6 +21,7 @@ public class    category extends AppCompatActivity implements DatePickerDialog.O
     private TextView dateText;
     Integer foodPoints, knowledgePoints, lifestylePoints;
     int foodPoint, knowledgePoint, lifestylePoint;
+    String datePicked;
 
 
 
@@ -75,6 +76,8 @@ public class    category extends AppCompatActivity implements DatePickerDialog.O
                 knowledgePoint = knowledgePoints.intValue();
                 lifestylePoint = lifestylePoints.intValue();
                 int score = (foodPoint + knowledgePoint + lifestylePoint) / 3;
+                Start.addDate(datePicked, score, id);
+                Start.setCurrentDate(datePicked);
                 Intent intent = new Intent(category.this, resultPage.class);
                 intent.putExtra("score", score);
                 startActivity(intent);
@@ -144,6 +147,7 @@ public class    category extends AppCompatActivity implements DatePickerDialog.O
     @Override
     public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
         String date = "Date: " + i2 + "/" + i1 + "/" + i;
+        datePicked = i2 + "/" + i1 + "/" +i;
         dateText.setText(date);
     }
 }
