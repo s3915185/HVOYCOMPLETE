@@ -38,8 +38,8 @@ public class Start extends AppCompatActivity {
         return dateSize;
     }
 
-    public static void addDate(String date, int score, Integer id) {
-        dateMemories.add(new DateMemory(date, score, id));
+    public static void addDate(String date, int score, Integer id, int lifestyleScore, int knowledgeScore, int foodScore) {
+        dateMemories.add(new DateMemory(date, score, id, lifestyleScore, knowledgeScore, foodScore));
         dateSize++;
     }
 

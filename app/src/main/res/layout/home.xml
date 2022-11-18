@@ -147,5 +147,52 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.142" />
 
+    <TextView
+        android:id="@+id/lifestyleScore"
+        android:layout_width="69dp"
+        android:layout_height="77dp"
+        android:fontFamily="@font/regular"
+        android:text="0%"
+        android:textColor="#16C2D5"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/foodScore"
+        android:layout_width="69dp"
+        android:layout_height="77dp"
+        android:fontFamily="@font/regular"
+        android:text="0%"
+        android:textColor="#16C2D5"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.695" />
+
+    <TextView
+        android:id="@+id/knowledgeScore"
+        android:layout_width="69dp"
+        android:layout_height="77dp"
+        android:fontFamily="@font/regular"
+        android:text="0%"
+        android:textColor="#16C2D5"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
