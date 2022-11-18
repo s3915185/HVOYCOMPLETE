@@ -19,7 +19,8 @@ import java.util.Date;
 public class    category extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
     private TextView dateText;
-
+    Integer foodPoints, knowledgePoints, lifestylePoints;
+    int foodPoint, knowledgePoint, lifestylePoint;
 
 
 
@@ -29,27 +30,27 @@ public class    category extends AppCompatActivity implements DatePickerDialog.O
         if (requestCode == 100) {
             if (resultCode == RESULT_OK) {
                 Button foodBtn = (Button) findViewById(R.id.food_Btn);
-                Integer points = (Integer)data.getExtras().get("points");
-                String foodButtonName = "Food: " + points.toString() + "/100";
-                Toast.makeText(this, points.toString(), Toast.LENGTH_SHORT).show();
+                foodPoints = (Integer)data.getExtras().get("points");
+                String foodButtonName = "Food: " + foodPoints.toString() + "/100";
+                Toast.makeText(this, foodPoints.toString(), Toast.LENGTH_SHORT).show();
                 foodBtn.setText(foodButtonName);
             }
         }
         if (requestCode == 200) {
             if (resultCode == RESULT_OK) {
                 Button knowledgeBtn = (Button) findViewById(R.id.knowledge_Btn);
-                Integer points = (Integer)data.getExtras().get("points");
-                String knowledgeButtonName = "Knowledge: " + points.toString() + "/100";
-                Toast.makeText(this, points.toString(), Toast.LENGTH_SHORT).show();
+                knowledgePoints = (Integer)data.getExtras().get("points");
+                String knowledgeButtonName = "Knowledge: " + knowledgePoints.toString() + "/100";
+                Toast.makeText(this, knowledgePoints.toString(), Toast.LENGTH_SHORT).show();
                 knowledgeBtn.setText(knowledgeButtonName);
             }
         }
         if (requestCode == 300) {
             if (resultCode == RESULT_OK) {
                 Button lifestyleBtn = (Button) findViewById(R.id.lifestyle_Btn);
-                Integer points = (Integer)data.getExtras().get("points");
-                String lifestyleButtonName = "Lifestyle: " + points.toString() + "/100";
-                Toast.makeText(this, points.toString(), Toast.LENGTH_SHORT).show();
+                lifestylePoints = (Integer)data.getExtras().get("points");
+                String lifestyleButtonName = "Lifestyle: " + lifestylePoints.toString() + "/100";
+                Toast.makeText(this, lifestylePoints.toString(), Toast.LENGTH_SHORT).show();
                 lifestyleBtn.setText(lifestyleButtonName);
             }
         }
@@ -64,6 +65,21 @@ public class    category extends AppCompatActivity implements DatePickerDialog.O
         dateText.setText("Pick a Date");
         Intent intent = getIntent();
         Integer id = (Integer) intent.getExtras().get("id");
+        Button submit = (Button) findViewById(R.id.submit_btn);
+
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                foodPoint = foodPoints.intValue();
+                knowledgePoint = knowledgePoints.intValue();
+                lifestylePoint = lifestylePoints.intValue();
+                int score = (foodPoint + knowledgePoint + lifestylePoint) / 3;
+                Intent intent = new Intent(category.this, resultPage.class);
+                intent.putExtra("score", score);
+                startActivity(intent);
+            }
+        });
 
         findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
